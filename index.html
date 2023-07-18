@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Measure</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Time Measure</h1>
+
+  <div class="input-container">
+    <label for="start-date">Початкова дата:</label>
+    <input type="date" id="start-date" name="start-date">
+  </div>
+
+  <div class="input-container">
+    <label for="end-date">Кінцева дата:</label>
+    <input type="date" id="end-date" name="end-date" disabled>
+  </div>
+
+  <div id="preset-container">
+    <label for="presets-select">Пресети:</label>
+      <button class="preset">Тиждень</button>
+      <button class="preset">Місяць</button>
+  </div>
+
+  <div id="options-container">
+    <label for="options-select">Опції:</label>
+    <select id="options-select">
+      <option value="all" selected="selected">Всі дні</option>
+      <option value="weekdays">Будні дні</option>
+      <option value="weekends">Вихідні дні</option>
+    </select>
+  </div>
+
+  <div id="dimension-container">
+    <label for="options-select">Одиниці вимірювання:</label>
+    <select id="dimension-select">
+      <option value="days" selected="selected">Порахувати кількість днів</option>
+      <option value="hours">Порахувати кількість годин</option>
+      <option value="minutes">Порахувати кількість хвилин</option>
+      <option value="seconds">Порахувати кількість секунд</option>
+    </select>
+  </div>
+
+  <div class="calculate-container">
+    <button id="calculate-button" disabled>Розрахувати</button>
+  </div>
+
+  <table class="table" id="results-table">
+    <thead>
+      <tr>
+        <th scope="col">Початкова</th>
+        <th scope="col">Кінцева</th>
+        <th scope="col">Результат</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.input-container {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding-left: 15%;
+}
+
+input:hover {
+  background: #eee;
+  color: black;
+}
+
+#preset-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#options-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#dimension-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.preset {
+  margin-left: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 12px;
+  border-color: darkgray;
+  color: gray;
+}
+
+.preset:hover{
+  background: #eee;
+  color: black;
+}
+
+#calculate-button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  border-radius: 12px;
+  background: light;
+  color: gray;
+}
+
+#calculate-button:hover {
+  background: #eee;
+  color: black;
+}
+
+.results-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  padding: 20px;
+}
+
+.task-title{
+  text-align: center;
+  padding-right: 10%;
+  padding-left: 10%;
+  border: 2px solid black;
+}
+
+label {
+  padding-right: 20px;
+}
+
+select {
+  background: #eee;
+  color: black;
+}
+
+select:hover {
+  cursor: pointer;
+  background: white;
+  border-radius: 4px;
+}
+
+table {
+  margin-top: 5px;
+}
