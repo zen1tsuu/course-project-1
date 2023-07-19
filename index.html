@@ -22,13 +22,11 @@
   </div>
 
   <div id="preset-container">
-    <label for="presets-select">Пресети:</label>
-      <button class="preset">Тиждень</button>
-      <button class="preset">Місяць</button>
+    <button class="preset">Тиждень</button>
+    <button class="preset">Місяць</button>
   </div>
 
   <div id="options-container">
-    <label for="options-select">Опції:</label>
     <select id="options-select">
       <option value="all" selected="selected">Всі дні</option>
       <option value="weekdays">Будні дні</option>
@@ -37,7 +35,6 @@
   </div>
 
   <div id="dimension-container">
-    <label for="options-select">Одиниці вимірювання:</label>
     <select id="dimension-select">
       <option value="days" selected="selected">Порахувати кількість днів</option>
       <option value="hours">Порахувати кількість годин</option>
@@ -50,16 +47,18 @@
     <button id="calculate-button" disabled>Розрахувати</button>
   </div>
 
-  <table class="table" id="results-table">
-    <thead>
-      <tr>
-        <th scope="col">Початкова</th>
-        <th scope="col">Кінцева</th>
-        <th scope="col">Результат</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <div id="results-container">
+    <table class="table" id="results-table">
+      <thead>
+        <tr>
+          <th scope="col">Початкова</th>
+          <th scope="col">Кінцева</th>
+          <th scope="col">Результат</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
   <script src="script.js"></script>
 </body>

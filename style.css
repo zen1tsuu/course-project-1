@@ -1,13 +1,27 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
   padding: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 .input-container {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
-  padding-left: 15%;
+}
+
+label {
+  padding-right: 20px;
+  width: 145px;
+}
+
+input {
+  width: 140px;
 }
 
 input:hover {
@@ -21,25 +35,14 @@ input:hover {
   margin-top: 10px;
 }
 
-#options-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-#dimension-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
 .preset {
-  margin-left: 5px;
+  margin: 5px;
   width: 100px;
   height: 30px;
   border-radius: 12px;
   border-color: darkgray;
   color: gray;
+  position: relative;
 }
 
 .preset:hover{
@@ -47,14 +50,29 @@ input:hover {
   color: black;
 }
 
+#options-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+} 
+
+#dimension-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.calculate-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
 #calculate-button {
   display: block;
-  margin: auto;
-  margin-top: 20px;
   width: 120px;
   height: 40px;
   border-radius: 12px;
-  background: light;
   color: gray;
 }
 
@@ -63,36 +81,8 @@ input:hover {
   color: black;
 }
 
-.results-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-h1 {
-  text-align: center;
-}
-
-h3 {
-  text-align: center;
-}
-
-p {
-  padding: 20px;
-}
-
-.task-title{
-  text-align: center;
-  padding-right: 10%;
-  padding-left: 10%;
-  border: 2px solid black;
-}
-
-label {
-  padding-right: 20px;
-}
-
 select {
+  width: 200px;
   background: #eee;
   color: black;
 }
