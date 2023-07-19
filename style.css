@@ -37,7 +37,7 @@ input:hover {
 
 .preset {
   margin: 5px;
-  width: 100px;
+  width: 110px;
   height: 30px;
   border-radius: 12px;
   border-color: darkgray;
@@ -48,6 +48,7 @@ input:hover {
 .preset:hover{
   background: #eee;
   color: black;
+  border-color: black;
 }
 
 #options-container {
@@ -73,16 +74,18 @@ input:hover {
   width: 120px;
   height: 40px;
   border-radius: 12px;
+  border-color: darkgray;
   color: gray;
 }
 
 #calculate-button:hover {
   background: #eee;
   color: black;
+  border-color: black;
 }
 
 select {
-  width: 200px;
+  width: 215px;
   background: #eee;
   color: black;
 }

@@ -36,6 +36,7 @@ function startDateInput() {
 }
 
 function endDateInput() {
+  startDate.max = endDate.value;
   endDateValue = endDate.value;
   calculateButtonState();
 }
@@ -97,8 +98,11 @@ function getTimeDiffInSeconds(startDate, endDate) {
 }
 
 function presetButtons(e) {
-  if (startDate.value == '') {
-    return;
+  if (startDate.value == "") {
+    const curDate = new Date();
+    let fmtDate = formatDate(curDate);
+    startDate.value = fmtDate;
+    startDate.dispatchEvent(new Event('change'));
   }
   let startDateValue = new Date(startDate.value);
   let endDateValue = new Date(endDate.value);
@@ -107,26 +111,21 @@ function presetButtons(e) {
   switch (e.target.innerHTML) {
     case 'Тиждень':
       currentDate.setDate(currentDate.getDate() + 7);
-      const day = String(currentDate.getDate()).padStart(2, '0');
-      // Місяці в JavaScript нумеруються з 0 до 11, тому додаємо 1
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
-      const year = currentDate.getFullYear();
-      // Сформувати рядок з датою у форматі "рррр-мм-дд"
-      let formattedDate = `${year}-${month}-${day}`;
-      endDate.value = formattedDate;
+      endDate.value = formatDate(currentDate);
       break;
     case 'Місяць':
       currentDate.setDate(currentDate.getDate() + 30);
-      const day1 = String(currentDate.getDate()).padStart(2, '0');
-      // Місяці в JavaScript нумеруються з 0 до 11, тому додаємо 1
-      const month1 = String(currentDate.getMonth() + 1).padStart(2, '0'); 
-      const year1 = currentDate.getFullYear();
-      // Сформувати рядок з датою у форматі "рррр-мм-дд"
-      let formattedDate1 = `${year1}-${month1}-${day1}`;
-      endDate.value = formattedDate1; 
+      endDate.value = formatDate(currentDate);
       break;
   }
   endDate.dispatchEvent(new Event('change'));
+}
+
+function formatDate(date) {
+  const day1 = String(date.getDate()).padStart(2, '0');
+  const month1 = String(date.getMonth() + 1).padStart(2, '0');
+  const year1 = date.getFullYear();
+  return `${year1}-${month1}-${day1}`;
 }
 
 function calculateDates() {
@@ -165,10 +164,9 @@ function saveToLocalStorage(result) {
   resultsStorage.push(entry);
   if (resultsStorage.length > 10) {
     resultsStorage.shift();
-    localStorage.removeItem('results');    
+    localStorage.removeItem('results');
   }
   localStorage.setItem('results', JSON.stringify(resultsStorage));
-  console.log(resultsStorage);
 }
 
 // фукнціонал початкової кінцевої дати
