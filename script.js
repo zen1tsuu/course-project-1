@@ -74,7 +74,7 @@ function getTimeDiffInSeconds(startDate, endDate) {
 
   switch (optionSelect.value) {
     case 'weekdays':
-      while (currentDate <= endDateValue) {
+      while (currentDate < endDateValue) {
         if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6) {
           counter++;
         }
@@ -83,7 +83,7 @@ function getTimeDiffInSeconds(startDate, endDate) {
       timeDiffInSeconds = counter * 86400;
       return timeDiffInSeconds;
     case 'weekends':
-      while (currentDate <= endDateValue) {
+      while (currentDate < endDateValue) {
         if (currentDate.getDay() === 0 || currentDate.getDay() === 6) {
           counter++;
         }
